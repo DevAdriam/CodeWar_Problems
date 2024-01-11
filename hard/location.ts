@@ -44,3 +44,4 @@ for (let i = 0; i < latLngArray.length - 1; i++) {
 
 console.log(new Date().getMilliseconds());
 console.log(`Total distance: ${totalDistance.toFixed(2)} kilometers`);
+// d function ka tot chat gyi kuu pay dr hehe
