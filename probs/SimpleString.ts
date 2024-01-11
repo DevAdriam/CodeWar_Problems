@@ -5,7 +5,7 @@ function stringExpansion(s) {
 
   const findOnlyNumbersArr = strArr
     .map((value, index) => ({ value, index }))
-    .filter((item) => !isNaN(item.value));
+    .filter((item: { value: string; index: number }) => !isNaN(item.value));
 
   if (findOnlyNumbersArr.length === 0) {
     return s;
@@ -47,9 +47,9 @@ function stringExpansion(s) {
   }
 }
 
-console.log(stringExpansion("3abc"));
-console.log(stringExpansion("3D2a5d2f"));
-console.log(stringExpansion("0d0a0v0t0y"));
-console.log(stringExpansion("3d332f2a"));
-console.log(stringExpansion("abcde"));
-console.log(stringExpansion("a2bcde"));
+console.log(stringExpansion("3abc")); // aaabbbccc
+console.log(stringExpansion("3D2a5d2f")); //DDDaadddddff
+console.log(stringExpansion("0d0a0v0t0y")); // ""
+console.log(stringExpansion("3d332f2a")); // "dddffaa"
+console.log(stringExpansion("abcde")); // abcde
+console.log(stringExpansion("a2bcde")); //abbccddee
